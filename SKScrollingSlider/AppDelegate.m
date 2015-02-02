@@ -25,7 +25,6 @@
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
 
-    NSLog(@"check time for selected employees in arrival time");
     // Override point for customization after application launch.
     return YES;
 }
