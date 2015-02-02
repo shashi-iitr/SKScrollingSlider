@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SKExampleViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    NSArray *tabs = @[@"Tab 0",@"Tab 1", @"Tab 2", @"Tab 3",@"Tab 4", @"Tab 5", @"Tab 6",@"Tab 7", @"Tab 8", @"Tab 9"];
+    SKExampleViewController *viewController = [[SKExampleViewController alloc] initWithTabs:tabs tabButtonSize:CGSizeMake(44.f, 44.f)];
+    
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
+
+    NSLog(@"check time for selected employees in arrival time");
     // Override point for customization after application launch.
     return YES;
 }
